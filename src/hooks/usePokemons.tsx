@@ -1,4 +1,3 @@
-// src/hooks/usePokemons.ts
 import { useQuery, useQueries } from '@tanstack/react-query';
 import { api } from '../api/pokemonApi';
 
