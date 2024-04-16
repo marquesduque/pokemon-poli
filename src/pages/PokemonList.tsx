@@ -23,23 +23,23 @@ const PokemonList: React.FC = () => {
                 nextIndex = focusedIndex - 1;
             }
             setFocusedIndex(nextIndex);
-            pokemonRefs.current[nextIndex]?.focus();
+            (pokemonRefs.current[nextIndex] as any).focus();
         }
     };
     const handleFocusedIndex = (index: number) => {
         setFocusedIndex(index);
-        pokemonRefs.current[index]?.focus();
+        (pokemonRefs.current[index] as any).focus();
     };
     useEffect(() => {
         const handleShortcut = (event: any) => {
             if ((event.ctrlKey || event.metaKey) && event.key === '/') {
                 event.preventDefault();
-                searchRef.current?.focus();
+                (searchRef.current as any).focus();
             }
             if (event.target === searchRef.current && event.key === 'ArrowDown') {
                 event.preventDefault();
                 if (pokemonRefs.current[0]) {
-                    pokemonRefs.current[0].focus();
+                    (pokemonRefs.current as any)[0].focus();
                 }
             }
         };
@@ -79,7 +79,7 @@ const PokemonList: React.FC = () => {
                     padding: '10px'
                 }}
                     tabIndex={0}
-                    ref={el => pokemonRefs.current[index] = el}
+                    ref={el => (pokemonRefs.current as any)[index] = el}
                     onMouseEnter={() => handleFocusedIndex(index)}
                     onKeyDown={handleKeyDown}
                 >

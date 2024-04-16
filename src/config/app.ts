@@ -14,7 +14,7 @@ export const appConfig: AppConfig = {
     name: "Fernando Duque",
     github: {
         title: "Teste Pokemon Poli",
-        url: "https://github.com/marquesduque",
+        url: "https://github.com/marquesduque/pokemon-poli",
     },
     author: {
         name: "Fernando Duque",
