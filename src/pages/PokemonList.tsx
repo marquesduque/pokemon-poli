@@ -101,7 +101,7 @@ const PokemonList: React.FC = () => {
                         <CardTitle>{pokemon.name}</CardTitle>
                         <div style={{ display: 'flex', flexWrap: 'wrap', margin: '10px 0px' }}>
                             {pokemon.abilities?.map((ability) => (
-                                <Badge style={{ marginRight: '5px' }} key={ability.ability.name}>
+                                <Badge style={{ marginRight: '5px', marginBottom: '5px' }} key={ability.ability.name}>
                                     {ability.ability.name}
                                 </Badge>
                             ))}
